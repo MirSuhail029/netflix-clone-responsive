@@ -1,62 +1,82 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
     <title>Netflix Clone Responsive</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header-section">
-        <div class="header-container">
-            <picture class="logo-container">
-                <img id="logo" src="../assets/netflix logo.png" title="logo"> 
+      <div class="header-container">
+        <picture class="logo-container">
+          <img id="logo" src="../assets/netflix logo.png" title="logo" />
+        </picture>
+        <div class="lang-signin-container">
+          <div class="language-container">
+            <picture class="globe-icon-container">
+              <img
+                id="globe-icon"
+                src="../assets/globe solid.svg"
+                title="icon"
+                alt=""
+              />
             </picture>
-            <div class="lang-signin-container">
-                <div class="language-container">
-                    <picture class="globe-icon-container">
-                        <img id="globe-icon" src="../assets/globe solid.svg" title="icon" alt="" >
-                    </picture>
-                    <ul class="language-selection-container">
-                        <li class="selection">English</li>
-                        <li class="dropdown hidden">
-                            <ul>
-                                <li>English</li>
-                                <li>Hindi</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <picture class="drop-icon-container">
-                        <img id="drop-icon" src="../assets/drop icon.png" title="icon" alt="" >
-                    </picture>
-                </div>
-            
-            <div class="sign-in-container">
-                <p>Sign In</p>
-            </div>
+            <ul class="language-selection-container">
+              <li class="selection">English</li>
+              <li class="dropdown hidden">
+                <ul>
+                  <li>English</li>
+                  <li>Hindi</li>
+                </ul>
+              </li>
+            </ul>
+            <picture class="drop-icon-container">
+              <img
+                id="drop-icon"
+                src="../assets/drop icon.png"
+                title="icon"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div class="sign-in-container">
+            <p>Sign In</p>
+          </div>
         </div>
-        </div>
+      </div>
     </header>
     <main class="main-section">
-        <!-- <section id="background-filter"></section> -->
-        <section class="hero-section">
-            <div class="hero-container">
-                <div class="hero-content-container">
-                    <h1 class="hero-heading">Unlimited movies, TV shows and more.</h1>
-                    <p class="hero-sub-heading">Watch anywhere. Cancel anytime.</p>
-                    <div class="get-started-container">
-                        <form class="get-started-form" method="post">
-                            <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-                            <div class="email-getstarted-container">
-                                <input id="email" type="email" name="email" placeholder="Email address">
-                                <span id="button">Get Started <img src="assets/greater-than-solid.svg"></span>
-                            </div>
-                        </form>
-                    </div>
+      <!-- <section id="background-filter"></section> -->
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="hero-content-container">
+            <h1 class="hero-heading">Unlimited movies, TV shows and more.</h1>
+            <p class="hero-sub-heading">Watch anywhere. Cancel anytime.</p>
+            <div class="get-started-container">
+              <form class="get-started-form" method="post">
+                <p class="form-message">
+                  Ready to watch? Enter your email to create or restart your
+                  membership.
+                </p>
+                <div class="email-getstarted-container">
+                  <input
+                    class="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                  />
+                  <span class="button">
+                    <p>Get Started</p>
+                    <img src="assets/greater-than-solid.svg"
+                  /></span>
                 </div>
+              </form>
             </div>
-        </section>
-        <!-- <section id="filler-section"></section>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="filler-section"></section>
         <section id="cards-section">
             <div class="card-container">
                 <div class="heading-description-container">
@@ -130,5 +150,5 @@
         </section> -->
     </main>
     <script type="text/javascript" src="scripts/script.js"></script>
-</body>
+  </body>
 </html>
