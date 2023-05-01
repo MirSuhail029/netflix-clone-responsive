@@ -5,11 +5,14 @@
 }
 body{
     position: relative;
+    font-family: sans-serif;
     /* background-image: url("../assets/netflix background.jpg"); */
     /* z-index: -1; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
 }
+
+/* Header section begins here*/
 .header-section{
     background:linear-gradient(45deg, black, gray, silver);
     height:85px;
@@ -18,6 +21,7 @@ body{
     display: flex;
     height:100%;
     width:94%;
+    max-width: 1830px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -39,7 +43,8 @@ body{
     margin-top: auto;
     margin-bottom: auto;
     border: 1px gray solid;
-    cursor:pointer;
+    padding: 2px 5px;
+    border-radius: 5px;
 }
 .globe-icon-container{
     flex-grow: 2;
@@ -60,6 +65,7 @@ body{
 .dropdown{
     position: absolute;
     top:30px;
+    cursor:default;
 }
 .dropdown ul{
     background-color: white;
@@ -85,7 +91,7 @@ body{
 }
 
 .sign-in-container{
-    background-color: red;
+    background-color: rgb(240, 39, 39);
     color:white;
     border-radius: 4px;
     height: 32px;
@@ -93,6 +99,10 @@ body{
     margin: auto 0;
     display: flex;
     margin-left:20px;
+}
+.sign-in-container:hover{
+    background-color: rgb(220, 39, 39);
+    cursor: pointer;
 }
 .sign-in-container p{
     margin: auto;
@@ -108,7 +118,7 @@ body{
     }
 }
 
-@media screen and (min-width:600px) and  (max-width:960px){
+@media screen and (min-width:900px){
     #logo{
         height: 150px;
         margin-top:-34px;
@@ -118,3 +128,75 @@ body{
 .hidden{
     display:none;
 }
+/* Header section ends here */
+
+/* main section begins here */
+.hero-section{
+    background:linear-gradient(45deg, gray,black,gray);
+    color:white;
+    display: flex;
+    /* height: 550px; */
+}
+.hero-container{
+    display: flex;
+    justify-content: center;
+    width: 94%;
+    margin:auto auto;
+}
+.hero-content-container{
+    width: 85%;
+}
+/* Headline Section */
+
+.hero-heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom:10px;
+}
+.hero-sub-heading{
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom:10px;
+}
+
+/* Get started container */
+.get-started-container{
+    font-size: 20px;
+}
+.email-getstarted-container{
+    display: flex;
+    flex-direction: column;
+}
+.get-started-form{
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+#email{
+    border: 1px gray solid;
+    border-radius: 5px;
+    width:360px;
+    padding: 18px;
+    background-color: rgba(0, 0, 0, 60%);
+    color: white;
+    font-size: 15px;
+}
+#button{
+    display: flex;
+    padding: 15px 30px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(216, 39, 39);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#button:hover{
+    background-color: rgb(194, 17, 17);
+    cursor: pointer;
+}
+#button img{
+    width:18px;
+    margin-left:7px;
+}
+/* main section ends here */
