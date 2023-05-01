@@ -1,0 +1,120 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    /* background-image: url("../assets/netflix background.jpg"); */
+    /* z-index: -1; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+.header-section{
+    background:linear-gradient(45deg, black, gray, silver);
+    height:85px;
+}
+.header-container{
+    display: flex;
+    height:100%;
+    width:94%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-container{
+    flex-grow: 2;
+}
+#logo{
+    height: 100%;
+}
+.lang-signin-container{
+    display: flex;
+    flex-grow:8;
+    justify-content: flex-end;
+}
+.language-container{
+    display: flex;
+    height:32px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px gray solid;
+    cursor:pointer;
+}
+.globe-icon-container{
+    flex-grow: 2;
+    margin: auto 0;
+    background-color: white;
+    border-radius: 50%;
+}
+#globe-icon{
+    width: 16px;
+}
+.language-selection-container{
+    flex-grow: 6;
+    position: relative;
+    margin: auto 5px;
+    list-style: none;
+    color:white;
+}
+.dropdown{
+    position: absolute;
+    top:30px;
+}
+.dropdown ul{
+    background-color: white;
+    list-style: none;
+    margin-left:-21px;
+    padding-right: 21px;
+}
+.dropdown ul li{
+    padding-right:23px;
+}
+.dropdown ul li:hover{
+    background-color: gray;
+    list-style: none;
+    padding-left: 23px;
+    margin-right: -21px;
+}
+.drop-icon-container{
+    flex-grow: 2;
+    margin: auto 0;
+}
+#drop-icon{
+    width: 20px;
+}
+
+.sign-in-container{
+    background-color: red;
+    color:white;
+    border-radius: 4px;
+    height: 32px;
+    width: 75px;
+    margin: auto 0;
+    display: flex;
+    margin-left:20px;
+}
+.sign-in-container p{
+    margin: auto;
+}
+
+@media screen and (max-width:600px){
+    .selection{
+        display: none;
+    }
+
+    .dropdown ul{
+        color:black;
+    }
+}
+
+@media screen and (min-width:600px) and  (max-width:960px){
+    #logo{
+        height: 150px;
+        margin-top:-34px;
+    }
+}
+
+.hidden{
+    display:none;
+}
