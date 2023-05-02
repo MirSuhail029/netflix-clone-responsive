@@ -144,7 +144,7 @@ body {
   justify-content: center;
   width: 94%;
   max-width: 1830px;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 .hero-content-container {
   padding: 3.75rem min(10%, 1rem) 3rem;
@@ -278,8 +278,110 @@ body {
 }
 /* hero section ends here */
 
-/* cards section begins here */
 
+/* cards section begins here */
+.divider-section{
+    background-color: black;
+}
+.divider-container{
+    width:94%;
+    margin:0px auto;
+    max-width: 1830px;
+}
+.divider{
+    background-color: darkslategray;
+    height: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+/* cards section */
+.cards-section{
+    color:white;
+    background-color: black;
+}
+.card-container{
+    width:94%;
+    max-width: 1830px;
+    margin: 0px auto;
+    padding-top: 20px;
+    /* background-color: blueviolet; */
+    padding:12px min(10%, 1rem);
+}
+.headings-media-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+.description-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* flex-grow:1; */
+    
+}
+.card-heading{
+    font-size: 2rem;
+    font-weight:700;
+    margin-top:20px;
+    
+}
+.card-sub-heading{
+    font-size: 1rem;
+    font-weight:400;
+    margin-top:20px;
+
+}
+
+.media-container{
+    margin-top:20px;
+}
+.content-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 70dvw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.foreground-image{
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    height:100%;
+}
+.background-video{
+    position: absolute;
+    width:80%;
+    z-index: 0;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+@media screen and (min-width:600px){
+    .headings-media-container{
+        flex-direction: row;
+    }
+    .description-container{
+        width:50%;
+        
+    }
+    .media-container{
+        flex-grow: 1;
+    }
+    .content-container{
+        min-height: 40dvw;
+    }
+}
+@media screen and (min-width:1280px){
+    .card-heading{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .card-sub-heading{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}
 /* cards section ends here */
 
 /* main section ends here */
