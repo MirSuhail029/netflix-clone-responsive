@@ -118,7 +118,7 @@ body {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   #logo {
     height: 150px;
     margin-top: -34px;
@@ -131,6 +131,8 @@ body {
 /* Header section ends here */
 
 /* main section begins here */
+
+/* hero section begins here */
 .hero-section {
   background: linear-gradient(45deg, gray, black, gray);
   color: white;
@@ -142,12 +144,11 @@ body {
   justify-content: center;
   width: 94%;
   max-width: 1830px;
-  margin: auto auto;
+  margin: 40px auto;
 }
 .hero-content-container {
-  width: 85%;
+  padding: 3.75rem min(10%, 1rem) 3rem;
 }
-/* Headline Section */
 
 .hero-heading {
   font-size: 2.5rem;
@@ -157,7 +158,7 @@ body {
 .hero-sub-heading {
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 }
 
 /* Get started container */
@@ -191,33 +192,94 @@ body {
   justify-content: center;
   padding: 10px 0px;
   width: 150px;
-  font-size: 17px;
   color: white;
   background-color: rgb(240, 39, 39);
   border-radius: 5px;
-  /* margin-left: 10px; */
+  margin-bottom: 10px;
 }
 .button:hover {
   background-color: rgb(220, 39, 39);
   cursor: pointer;
 }
 .button p {
-  margin: 0px auto;
+  font-size: 17px;
+  margin: auto 0px;
 }
 .button img {
   width: 13px;
   height: 23px;
-  margin: 0px auto;
+  margin:auto 10px;
 }
 
 @media screen and (min-width: 600px) {
   .email-getstarted-container {
     flex-direction: row;
+    margin-bottom: 15px;
   }
   .email {
     margin-bottom: 0px;
+    flex:1;
+    max-width: 250px;
   }
   .button {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    flex:1;
+    max-width: 180px;
+  }
+  .button p{
+    font-size: 25px;
+  }
+  .button img{
+    width:20px;
+  }
+  .hero-content-container{
+    padding: 3.75rem min(10%, 6rem) 4rem;
+  }
+  .hero-heading{
+    width:66%;
+  }
+  .hero-sub-heading{
+    width:66%;
+  }
+  .form-message{
+    width:66%;
   }
 }
+
+@media screen and (min-width:960px){
+    .hero-heading{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .email{
+        max-width: 400px;
+    }
+    
+}
+
+@media screen and (min-width:1280px){
+    .hero-heading {
+        font-size: 4rem;
+        font-weight: 900;
+      }
+      .hero-sub-heading{
+        font-size:1.5rem;
+      }
+}
+@media screen and (min-width:1920px){
+    .hero-heading{
+        font-size: 5.5rem;
+    }
+    .hero-sub-heading{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+/* hero section ends here */
+
+/* cards section begins here */
+
+/* cards section ends here */
+
 /* main section ends here */
