@@ -74,7 +74,7 @@ const createFaq=function(heading,body){
   const button=document.createElement("span");
   button.textContent="+";
   button.setAttribute("class","faq-button");
-  button.addEventListener("click",function(){
+  faqContainer.addEventListener("click",function(){
       if (flag===true){
           faqBody.setAttribute("class","faq-body");
           button.textContent="x";
@@ -96,3 +96,34 @@ for (const item of faqArray){
   const [title,heading]=item;
   createFaq(title, heading);
 }
+
+const getStartedContainer =document.createElement("div");
+getStartedContainer.setAttribute("class","get-started-container");
+getStartedContainer.setAttribute("style","margin-top:20px;")
+faqsContainer.append(getStartedContainer);
+const getStartedForm = document.createElement("form");
+getStartedForm.setAttribute("class","get-started-form");
+getStartedForm.setAttribute("method","post");
+getStartedContainer.append(getStartedForm);
+const formMessage=document.createElement("p");
+formMessage.setAttribute("class","form-message");
+formMessage.textContent="Ready to watch? Enter your email to create or restart your membership.";
+getStartedForm.append(formMessage);
+const emailGetstartedContainer=document.createElement("div");
+emailGetstartedContainer.setAttribute("class","email-getstarted-container");
+getStartedForm.append(emailGetstartedContainer);
+const email=document.createElement("input");
+email.setAttribute("class","email");
+email.setAttribute("type","email");
+email.setAttribute("name","email");
+email.setAttribute("placeholder","Email Address");
+emailGetstartedContainer.append(email);
+const button=document.createElement("span");
+button.setAttribute("class","button");
+emailGetstartedContainer.append(button);
+const p=document.createElement("p");
+p.textContent="Get Started";
+button.append(p);
+const image=document.createElement("img");
+image.setAttribute("src","assets/greater-than-solid.svg");
+button.append(image);
