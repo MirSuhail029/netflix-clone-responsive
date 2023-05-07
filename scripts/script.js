@@ -6,10 +6,12 @@ for (const container of langContainer) {
   for (const dropDown of dropDownList) {
     container.addEventListener("click", function () {
       if (flag === true) {
+        container.setAttribute("style","outline: 2px white solid;")
         dropDown.setAttribute("class", "dropdown");
         flag = false;
       } else if (flag === false) {
         dropDown.setAttribute("class", "dropdown hidden");
+        container.removeAttribute("style");
         flag = true;
       }
     });
@@ -61,27 +63,29 @@ const createFaq=function(heading,body){
   const faqHeadingButtonContainer=document.createElement("div");
   faqHeadingButtonContainer.setAttribute("class","faq-heading-button-container");
   faqContainer.append(faqHeadingButtonContainer);
+  const faqHeadingContainer=document.createElement("div");
+  faqHeadingContainer.setAttribute("class","faq-heading-container");
+  faqHeadingButtonContainer.append(faqHeadingContainer);
   const faqHeading=document.createElement("p");
-  faqHeading.setAttribute("class","faq-heading");
   faqHeading.textContent=heading;
-  faqHeadingButtonContainer.append(faqHeading);
+  faqHeadingContainer.append(faqHeading);
 
   const faqButtonContainer=document.createElement("div");
   faqButtonContainer.setAttribute("class","faq-button-container");
   faqHeadingButtonContainer.append(faqButtonContainer);
 
   let flag=true;
-  const button=document.createElement("span");
-  button.textContent="+";
+  const button=document.createElement("img");
+  button.setAttribute("src","assets/expand.svg");
   button.setAttribute("class","faq-button");
   faqContainer.addEventListener("click",function(){
       if (flag===true){
           faqBody.setAttribute("class","faq-body");
-          button.textContent="x";
+          button.setAttribute("src","assets/collapse.svg");
           flag=false;
       }else if(flag===false){
           faqBody.setAttribute("class","faq-body hidden");
-          button.textContent="+";
+          button.setAttribute("src","assets/expand.svg");
           flag=true;
       }
   });

@@ -6,24 +6,19 @@
 body {
   position: relative;
   font-family: sans-serif;
-  /* background-color: rgb(0, 8, 29); */
   background-color: black;
-  /* background-image: url("../assets/netflix background.jpg"); */
-  /* z-index: 10; */
   background-repeat: no-repeat;
-  /* background-size: cover; */
 }
 
 /* Header section begins here*/
 .header-section {
-  /* background: linear-gradient(45deg, black, gray, silver); */
   background-color: rgb(0, 8, 29);
   height: 85px;
 }
 .header-container {
   display: flex;
   height: 100%;
-  width: 94%;
+  width: 92%;
   max-width: 1830px;
   margin-left: auto;
   margin-right: auto;
@@ -137,30 +132,30 @@ body {
 
 /* hero section begins here */
 .hero-section {
-  /* background: linear-gradient(45deg, gray, black, gray); */
   background-color: rgb(0, 8, 29);
-  /* box-shadow: 50px 0px rgb(0, 8, 29) inset, 
-             -50px -50px rgb(0, 8, 29) inset; */
   color: white;
   display: flex;
-  /* height: 550px; */
+  min-height: 500px;
 }
 .hero-container {
-  /* background: linear-gradient(90deg, rgba(128, 0, 128,50%), rgba(0, 0, 0, 50%)); */
   display: flex;
   justify-content: center;
-  width: 94%;
+  width: 92%;
   max-width: 1830px;
   margin:30px auto;
+  margin-top: 0px;
 }
 .hero-background-image{
   background-image: url("../assets/netflix background.jpg");
-  /* background: linear-gradient(90deg, rgba(128, 0, 128,50%), rgba(0, 0, 0, 50%)); */
 }
 .hero-background-filter{
-  /* background-image: url("../assets/netflix background.jpg"); */
   background: linear-gradient(135deg, rgba(64, 7, 7, 1),rgba(64, 7, 7, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .hero-content-container {
   padding: 3.75rem min(10%, 1rem) 3rem;
 }
@@ -227,19 +222,22 @@ body {
 }
 
 @media screen and (min-width: 600px) {
+  .hero-container{
+    min-height: 600px;
+  }
   .email-getstarted-container {
     flex-direction: row;
     margin-bottom: 15px;
   }
   .email {
     margin-bottom: 0px;
-    flex:1;
+    flex:0.8;
     max-width: 250px;
   }
   .button {
     margin-bottom: 0px;
     margin-left: 10px;
-    flex:1;
+    flex:1.2;
     max-width: 180px;
   }
   .button p{
@@ -283,13 +281,17 @@ body {
       }
 }
 @media screen and (min-width:1920px){
-    .hero-heading{
+  .hero-container{
+    min-height: 700px;
+  }  
+  .hero-heading{
         font-size: 5.5rem;
     }
     .hero-sub-heading{
         font-size: 2rem;
         font-weight: 700;
     }
+    
 }
 /* hero section ends here */
 
@@ -299,12 +301,11 @@ body {
   background-color: rgb(0, 8, 29);
 }
 .divider-container{
-    width:94%;
+    width:92%;
     margin:0px auto;
     max-width: 1830px;
 }
 .divider{
-    /* background-color: darkslategray; */
     height: 10px;
     margin: 10px 0px;
     border-radius: 5px;
@@ -315,7 +316,7 @@ body {
     background-color: rgb(0, 8, 29);
 }
 .card-container{
-    width:94%;
+    width:92%;
     max-width: 1830px;
     margin: 0px auto;
     padding-top: 20px;
@@ -324,7 +325,6 @@ body {
 .headings-media-container{
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
 }
 .description-container{
     display:flex;
@@ -353,8 +353,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin:auto;
     height:70dvw;
 }
 .foreground-image{
@@ -481,7 +480,7 @@ body {
   padding-top: 60px;
 }
 .faqs-container{
-  width:94%;
+  width:92%;
   margin: 0px auto;
   max-width: 1830px;
   padding: 0px 1rem 6rem 1rem;
@@ -506,18 +505,15 @@ body {
 .faq-heading-button-container:hover{
   background-color: rgb(34, 51, 98);
 }
-.faq-heading{
+.faq-heading-container{
   flex-grow: 8;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .heading-button-container{
   flex-grow: 2;
-  /* display: flex;
-  position: relative;
-  border: 1px black solid;
-  background-color: gray;
-  padding: 2%; */
 }
 .faq-body{
   background-color: rgb(19, 33, 68);
@@ -526,21 +522,9 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
 }
-/* .heading-button-container :last-child{
-  position: absolute;
-  right:2%;
-  font-weight: bold;
-  font-size: 3dvw;
-  cursor: pointer;
-} */
-
-/* #get-started-section{
-  background-color: black;
-  color:white;
-  position: relative;
-  text-align:center;
-  padding:2%;
-} */
+.faq-button svg{
+  color: white;
+}
 
 @media screen and (min-width:600px){
   .faqs-container{
@@ -552,7 +536,7 @@ body {
   }
 }
 @media screen and (min-width:960px){
-  .faq-heading{
+  .faq-heading-container{
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -573,14 +557,12 @@ body {
   background-color: rgb(0, 8, 29);
 }
 .footer-container{
-  /* background-color:red; */
   color:gray;
   justify-content: center;
-  width:94%;
+  width:92%;
   padding:36px 1rem 6rem 1rem;
   max-width: 1830px;
   margin: 0px auto;
-  /* height: 300px; */
 }
 .footer-container a{
   color: gray;
