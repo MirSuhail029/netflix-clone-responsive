@@ -50,6 +50,7 @@ const faqArray=[
 const faqSection = document.getElementById("faq-section");
 const faqsContainer=document.createElement("div");
 faqsContainer.setAttribute("class","faqs-container");
+faqsContainer.setAttribute("style","overflow:hidden");
 faqSection.append(faqsContainer);
 const faqHeading=document.createElement("h2");
 faqHeading.textContent="Frequently Asked Questions";
@@ -60,6 +61,7 @@ const createFaq=function(heading,body){
   const faqContainer=document.createElement("div");
   faqContainer.setAttribute("class","faq-container");
   faqsContainer.append(faqContainer);
+
   const faqHeadingButtonContainer=document.createElement("div");
   faqHeadingButtonContainer.setAttribute("class","faq-heading-button-container");
   faqContainer.append(faqHeadingButtonContainer);
@@ -79,15 +81,15 @@ const createFaq=function(heading,body){
   button.setAttribute("src","assets/expand.svg");
   button.setAttribute("class","faq-button");
   faqContainer.addEventListener("click",function(){
-      if (flag===true){
-          faqBody.setAttribute("class","faq-body");
-          button.setAttribute("src","assets/collapse.svg");
-          flag=false;
-      }else if(flag===false){
-          faqBody.setAttribute("class","faq-body hidden");
-          button.setAttribute("src","assets/expand.svg");
-          flag=true;
-      }
+    if (flag===true){
+      faqBody.setAttribute("class","faq-body");
+      button.setAttribute("src","assets/collapse.svg");
+      flag=false;
+    }else if(flag===false){
+      faqBody.setAttribute("class","faq-body hidden");
+      button.setAttribute("src","assets/expand.svg");
+      flag=true;
+    }
   });
   faqButtonContainer.append(button);
   const faqBody=document.createElement("p");
