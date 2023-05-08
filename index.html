@@ -7,6 +7,46 @@
     <title>Netflix Clone Responsive</title>
   </head>
   <body>
+    <div id="sign-in-screen" class="sign-in-screen hidden">
+      <div class="signin-screen-container">
+        <form class="signin-screen-form">
+          <div class="signin-screen-form-heading">
+            <h1>Sign In</h1>
+          </div>
+          <div class="signin-screen-form-email">
+            <input type="text" name="email" placeholder="Email or Phone number">
+          </div>
+          <div class="signin-screen-form-password">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <div class="signin-screen-form-button">
+            <div class="signin-screen-button">
+              Sign In
+            </div> 
+          </div>
+          <div class="signin-screen-form-remember">
+            <div class="remember-container">
+              <div class="signin-screen-remember">
+                <input type="checkbox">
+              </div>
+              <div class="signin-screen-remember-prompt">
+                <p>Remember Me</p>
+              </div>
+            </div>
+            <div class="signin-screen-remember-help">
+              <p>Need help?</p>
+            </div>
+          </div>
+          <div class="signin-screen-form-signup">
+            <div class="sign-up">
+              New to Netflix? 
+              <span class="signup">Sign up now</span>
+            </div>
+            <div class="recaptcha">This page is protected by Google reCAPTCHA to ensure you're not a bot. <span class="learn-more">Learn More</span></div>
+          </div>
+        </form>
+      </div>
+    </div>
     <header class="header-section">
       <div class="header-container">
         <picture class="logo-container">
@@ -40,7 +80,7 @@
               />
             </picture>
           </div>
-          <div class="sign-in-container">
+          <div id="signin-main-button" class="sign-in-container">
             <p>Sign In</p>
           </div>
         </div>
